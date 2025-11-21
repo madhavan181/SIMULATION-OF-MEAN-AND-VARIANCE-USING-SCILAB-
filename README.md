@@ -35,8 +35,59 @@ __PROCEDURE:__
 6.Verify the generated results
 
 __PROGRAM:__
+```
+clear;
+clc;
+
+function z = f(x)
+    z = 3*(1-x)^2;
+endfunction
+
+a = 0;
+b = 1;
+EX = intg(a, b, f);
+
+function z = c(y)
+    z = 3*(1-y)^2;
+endfunction
+
+EY = intg(a, b, c);
+
+disp(EX, "Mean of X = ");
+disp(EY, "Mean of Y = ");
+
+function z = g(x)
+    z = 3*(1-x)^2;
+endfunction
+
+EX2 = intg(a, b, g);
+
+function z = h(y)
+    z = 3*(1-y)^2;
+endfunction
+
+EY2 = intg(a, b, h);
+
+vX2 = EX2 - (EX)^2;
+vY2 = EY2 - (EY)^2;
+
+disp(vX2, "Variance of X = ");
+disp(vY2, "Variance of Y = ");
+
+x = input("Enter reference sequence x = ");
+y = input("Enter second sequence y = ");
+
+n1 = max(size(y)) - 1;
+r = corr(x, y, n1);
+
+clf;
+plot2d3(1:length(r), r);
+```
 
 __OUTPUT GRAPH:__
+<img width="573" height="439" alt="image" src="https://github.com/user-attachments/assets/3560c340-7417-4eb8-8963-21ccf3911678" />
+
+<img width="757" height="560" alt="image" src="https://github.com/user-attachments/assets/53d6115a-f1c0-42e9-8381-709ba43009b7" />
 
 __RESULT:__
 
