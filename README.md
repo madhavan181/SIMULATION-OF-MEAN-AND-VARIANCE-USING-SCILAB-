@@ -85,9 +85,15 @@ plot2d3(1:length(r), r);
 ```
 
 __OUTPUT GRAPH:__
+
 <img width="573" height="439" alt="image" src="https://github.com/user-attachments/assets/3560c340-7417-4eb8-8963-21ccf3911678" />
 
 <img width="757" height="560" alt="image" src="https://github.com/user-attachments/assets/53d6115a-f1c0-42e9-8381-709ba43009b7" />
+
+__CALCULATION:__
+
+<img width="569" height="726" alt="image" src="https://github.com/user-attachments/assets/58773230-2237-472c-939d-ce271a6659f0" />
+
 
 __RESULT:__
 
